@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "main.css" >
+</head>
+<body>
+    <h1 Treasure Hunt </h1>
+    <img src = "FirstClue.jpg" alt = "First clue" class = "clue" id="clue" onclick = hideClue()>
+        <p class = "firstparagraph" id = "firstparagraph">Click on the picture to unlock a hint, doing so will delete it. <br> 
+          MEMORISE IT!</p>
+    <script>
+        function hideClue() {
+            document.getElementById("clue").classList.add("hide");
+            const firstparagraph = document.getElementById("firstparagraph");
+            firstparagraph.textContent = "A certain lawn at the front of the school."
+        }
+            const image = document.getElementById('clue');
+
+            if (localStorage.getItem('imageHidden') === 'true') {
+                image.classList.add('hide');
+            }
+
+            document.addEventListener("keydown", (event) => {
+                if(event.key === '3'){
+                    firstparagraph.textContent = " Congratulations! The second clue has been found"
+                };
+            });
+
+    </script>
+</body>
+</html>
+
+

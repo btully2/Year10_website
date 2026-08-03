@@ -1,0 +1,28 @@
+body{
+  background-color: beige;
+  font-family: 'Courier New', Courier, monospace;
+  margin:auto;
+}
+
+.firstparagraph{
+  color:#a90a0a;
+}
+
+.clue{
+  display:flex;
+  width: 50px;
+  align-content:center;
+  justify-content:left;
+}
+.clue{
+  display:flex;
+  
+}
+.clue:hover{
+  cursor: pointer;
+}
+
+
+.clue.hide{
+  display:none;
+}
